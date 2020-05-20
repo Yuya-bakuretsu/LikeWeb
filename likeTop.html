@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>likeWeb</title>
+<!--    <script src="like.js"></script>-->
+</head>
+<body>
+<div id="input_form">
+    <form action="result.html" method="get">
+        <h3>
+            <label for="input_name">
+                スキを届けたい相手の名前を入力しよう(8文字以内)
+            </label>
+        </h3>
+        <input type="text" name="target" id="input_name" maxlength="8">
+        <br>
+        <input name="type" type="radio" value="card_friend" id="friends">
+        <label for="friends">
+            <img src="image/card_friend.png" alt="友人としてのスキを伝える" width="30%" height="30%">
+        </label>
+        <br>
+        <input name="type" type="radio" value="card_fun" id="fun">
+        <label for="fun">
+            <img src="image/card_fun.png" alt="推しとしてのスキを伝える" width="30%" height="30%">
+        </label>
+        <br>
+        <input name="type" type="radio" value="card_family" id="family">
+        <label for="family">
+            <img src="image/card_family.png" alt="恋人としてのスキを伝える" width="30%" height="30%">
+        </label>
+        <br>
+        <h3>
+            相手にメッセージを届けよう(30字以内)
+        </h3>
+        <input type="text" maxlength="30" name="message">
+        <div id="display_preview">
+            プレビュー表示領域
+        </div>
+        <p>
+            <input type="submit" value="作成する">
+        </p>
+    </form>
+
+
+</div>
+
+</body>
+</html>
