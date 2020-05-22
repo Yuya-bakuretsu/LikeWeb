@@ -3,47 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>likeWeb</title>
-<!--    <script src="like.js"></script>-->
+    <link rel="stylesheet" href="topPage.css">
 </head>
 <body>
 <div id="input_form">
     <form action="result.html" method="get">
-        <h3>
-            <label for="input_name">
-                スキを届けたい相手の名前を入力しよう(8文字以内)
+        <div id="select_type">
+            <h3>
+                スキの種類を選ぼう
+            </h3>
+            <input name="type" type="radio" value="card_friend" id="friends">
+            <label for="friends">
+                <img src="image/card_friend.png" alt="友人としてのスキを伝える" width="30%" height="30%">
             </label>
-        </h3>
-        <input type="text" name="target" id="input_name" maxlength="8">
-        <br>
-        <input name="type" type="radio" value="card_friend" id="friends">
-        <label for="friends">
-            <img src="image/card_friend.png" alt="友人としてのスキを伝える" width="30%" height="30%">
-        </label>
-        <br>
-        <input name="type" type="radio" value="card_fun" id="fun">
-        <label for="fun">
-            <img src="image/card_fun.png" alt="推しとしてのスキを伝える" width="30%" height="30%">
-        </label>
-        <br>
-        <input name="type" type="radio" value="card_family" id="family">
-        <label for="family">
-            <img src="image/card_family.png" alt="恋人としてのスキを伝える" width="30%" height="30%">
-        </label>
-        <br>
-        <h3>
-            相手にメッセージを届けよう(30字以内)
-        </h3>
-        <input type="text" maxlength="30" name="message">
+            <br>
+            <input name="type" type="radio" value="card_fun" id="fun">
+            <label for="fun">
+                <img src="image/card_fun.png" alt="推しとしてのスキを伝える" width="30%" height="30%">
+            </label>
+            <br>
+            <input name="type" type="radio" value="card_family" id="family">
+            <label for="family">
+                <img src="image/card_family.png" alt="恋人としてのスキを伝える" width="30%" height="30%">
+            </label>
+            <p>
+                <button type="button" id="next_type">OK!</button>
+            </p>
+        </div>
+        <div id="select_input">
+            <div id="select_name">
+                <h3>
+                    <label for="input_name">
+                        スキを届けたい相手の名前を入力しよう(8文字以内)
+                    </label>
+                </h3>
+                <input type="text" name="target" id="input_name" maxlength="8">
+            </div>
+            <div id="select_message">
+                <h3>
+                    相手にメッセージを届けよう(30字以内)
+                </h3>
+                <input type="text" maxlength="30" name="message">
+                <p>
+                    <button type="button" id="back_input">戻る</button>
+                </p>
+            </div>
+        </div>
+
         <div id="display_preview">
-            プレビュー表示領域
+            <canvas id="preview"></canvas>
         </div>
         <p>
             <input type="submit" value="作成する">
         </p>
     </form>
-
-
 </div>
 
+<script src="like.js"></script>
 </body>
 </html>
