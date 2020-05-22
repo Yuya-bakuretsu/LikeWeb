@@ -1,0 +1,122 @@
+body {
+  background-color: #FFE9EF;
+}
+header{
+  background-color: white;
+  width: 100%;
+  height: 124px;
+  border-bottom: solid 5px #8CE3FF;
+}
+header h1 {
+  font-size: 15;
+  text-align: center;
+  margin-top: -22px;
+  font-family: "Hiragino Maru Gothic Pro";
+  color: #FFA6BE;
+}
+header img {
+  width: 113px;
+  height: 113px;
+  margin: -5px auto 0 auto;
+  display: block;
+}
+.wrap_intro {
+  text-align: center;
+}
+.intro p {
+  padding-top: 20px;
+  font-family: "Hiragino Maru Gothic Pro";
+  color: #FFA6BE;
+  font-size: 15px;
+  line-height: 23px;
+}
+.intro img {
+  margin-top: -10px;
+  width: 113px;
+  height: 113px;
+}
+.intro{
+    width: 85%;
+    height: 303px;
+    margin: 27px auto 0 auto;
+    background-color: white;
+    border-radius: 10px;
+}
+.suki_link {
+  background-color: #8CE3FF;
+  width: 212px;
+  height: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
+}
+.first_link {
+  margin:-8px auto 31px auto;
+}
+.suki_link p {
+  padding-top: 20px;
+  font-size: 20px;
+  color: white;
+}
+.description {
+  margin: 32px auto 0 auto;
+}
+.description h2 {
+  font-family: "Hiragino Maru Gothic Pro";
+  font-size: 20px;
+  text-align: center;
+  color: #424242;
+}
+.description h3 {
+  font-family: "Hiragino Maru Gothic Pro";
+  font-size: 17px;
+  text-align: center;
+  color: #424242;
+  margin: 20px auto 0 auto;
+}
+.description .img_wrapper_1 img{
+  margin-top: 15px;
+  width: 212px;
+  height: 203px;
+  background-color: white;
+  border-radius: 9px;
+}
+.description .img_wrapper_2 img{
+  margin-top: 15px;
+  width: 243px;
+  height: 175px;
+}
+.description .img_wrapper_3 img{
+  margin-top: 15px;
+  width: 270px;
+  height: 140px;
+}
+.second_link {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+footer {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  border-top: solid 5px #8CE3FF;
+  font-family: "Hiragino Maru Gothic Pro";
+  font-size: 15px;
+  color: #424242;
+}
+footer p {
+  display: inline-block;
+}
+footer a {
+  text-decoration: none;
+  display: inline-block;
+  color: #424242;
+  margin-left: 15px;
+}
+.wrap_footer_text{
+  margin-top: 25px;
+}
+.wrap_select {
+  display: none;
+}
