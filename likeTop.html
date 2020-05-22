@@ -9,19 +9,21 @@
     <link rel="stylesheet" href="reset.css" type="text/css">
     <link rel="stylesheet" href="style.css" type="text/css">
     <title>Suki！</title>
-    <link rel="stylesheet" href="topPage.css">
+    <!--    <link rel="stylesheet" href="topPage.css">-->
 </head>
 
 <body>
 <header><img src="./img/logo.svg" alt="logo">
     <h1>あなたのスキを伝えよう</h1>
 </header>
-<div class="wrap_intro">
+<div class="wrap_intro" id="intro">
     <div class="intro">
         <p>「Suki！」はあなたのスキを伝える<br>Webサービスです<br>日頃は恥ずかしくて言えないあの人に<br>スキを伝えてみましょう</p>
         <img src="./img/logo.svg" alt="logo">
         <div class="suki_link first_link">
-            <p>スキを伝える</p>
+            <button type="button" id="link1">
+                <p>スキを伝える</p>
+            </button>
         </div>
     </div>
     <div class="description">
@@ -34,7 +36,9 @@
         <div class="img_wrapper_3"><img src="./img/description_3.svg" alt="description"></div>
     </div>
     <div class="suki_link second_link">
-        <p>スキを伝える</p>
+        <button type="button" id="link2">
+            <p>スキを伝える</p>
+        </button>
     </div>
     <footer>
         <div class="wrap_footer_text">
@@ -45,7 +49,7 @@
         </div>
     </footer>
 </div>
-<div class="wrap_select">
+<div class="wrap_select" id="select_window">
     <div id="input_form">
         <form action="result.html" method="get">
             <div id="select_type">
@@ -83,7 +87,7 @@
                     <h3>
                         相手にメッセージを届けよう(30字以内)
                     </h3>
-                    <input type="text" maxlength="30" name="message">
+                    <input type="text" maxlength="30" name="message" id="input_message">
                     <p>
                         <button type="button" id="back_input">戻る</button>
                     </p>

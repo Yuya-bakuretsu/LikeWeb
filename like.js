@@ -6,6 +6,10 @@
 //    const nameWindow = document.getElementById("select_name");
 //    const messageWindow = document.getElementById("select_message");
     const inputWindow = document.getElementById("select_input");
+    const intro = document.getElementById("intro");
+    const selectWindow = document.getElementById("select_window");
+    const sukiLink1 = document.getElementById("link1");
+    const sukiLink2 = document.getElementById("link2");
     const nextType = document.getElementById("next_type");
 //    const nextName = document.getElementById("next_name");
 //    const backName = document.getElementById("back_name");
@@ -13,6 +17,8 @@
     const friends = document.getElementById("friends");
     const fun = document.getElementById("fun");
     const family = document.getElementById("family");
+    const inputName = document.getElementById("input_name");
+    const inputMessage = document.getElementById("input_message");
 
     nextType.onclick = () => {
         changeWindow("next_type");
@@ -29,6 +35,18 @@
     family.onclick = () => {
         loadImage("card_family.png");
     }
+    sukiLink1.onclick = () => {
+        changeWindow("link1");
+    }
+    sukiLink2.onclick = () => {
+        changeWindow("link2");
+    }
+    inputName.onkeyup = () => {
+        drawText(0);
+    }
+    inputMessage.onkeyup = () => {
+        drawText(1);
+    }
 
 
     function changeWindow(flag){
@@ -41,6 +59,12 @@
 
             case "back_input":
                 typeWindow.style.display = "block";
+                inputWindow.style.display = "none";
+                break;
+            case "link1":
+            case "link2":
+                intro.style.display = "none";
+                selectWindow.style.display = "block";
                 inputWindow.style.display = "none";
                 break;
             default:
@@ -63,16 +87,26 @@
             ctx.drawImage(image, 0, 0);
         });
     }
-    function drawText(canvas_id, text_id){
-        let canvas = document.getElementById(canvas_id);
-        let ctx = canvas.getContext('2d');
-        let text = document.getElementById(text_id);
+
+    const canvas = document.getElementById("preview");
+    const ctx = canvas.getContext('2d');
+    function drawText(text_id){
+        let text;
+            if(text_id){
+                text = inputMessage.value;
+            }else{
+                text = inputName.value;
+            }
+
+
+
 //      文字スタイル指定
 
+        ctx.font = '32px serif';
 //      座標指定
         let x = (canvas.width / 2);
         let y = (canvas.height / 2);
-        ctx.fillText(text.value, x, y)
+        ctx.fillText(text, x, y);
     }
 
 })();
