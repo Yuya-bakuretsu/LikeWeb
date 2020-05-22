@@ -30,29 +30,28 @@
                 <button type="button" id="next_type">OK!</button>
             </p>
         </div>
-        <div id="select_name">
-            <h3>
-                <label for="input_name">
-                    スキを届けたい相手の名前を入力しよう(8文字以内)
-                </label>
-            </h3>
-            <input type="text" name="target" id="input_name" maxlength="8">
-            <p>
-                <button type="button" id="back_name">戻る</button>
-                <button type="button" id="next_name">OK!</button>
-            </p>
+        <div id="select_input">
+            <div id="select_name">
+                <h3>
+                    <label for="input_name">
+                        スキを届けたい相手の名前を入力しよう(8文字以内)
+                    </label>
+                </h3>
+                <input type="text" name="target" id="input_name" maxlength="8">
+            </div>
+            <div id="select_message">
+                <h3>
+                    相手にメッセージを届けよう(30字以内)
+                </h3>
+                <input type="text" maxlength="30" name="message">
+                <p>
+                    <button type="button" id="back_input">戻る</button>
+                </p>
+            </div>
         </div>
-        <div id="select_message">
-            <h3>
-                相手にメッセージを届けよう(30字以内)
-            </h3>
-            <input type="text" maxlength="30" name="message">
-            <p>
-                <button type="button" id="back_message">戻る</button>
-            </p>
-        </div>
+
         <div id="display_preview">
-            プレビュー表示領域
+            <canvas id="preview"></canvas>
         </div>
         <p>
             <input type="submit" value="作成する">

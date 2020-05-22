@@ -1,52 +1,78 @@
 (function () {
   'use strict'
+
     // フォームのIDなどを取得
     const typeWindow = document.getElementById("select_type");
-    const nameWindow = document.getElementById("select_name");
-    const messageWindow = document.getElementById("select_message");
+//    const nameWindow = document.getElementById("select_name");
+//    const messageWindow = document.getElementById("select_message");
+    const inputWindow = document.getElementById("select_input");
     const nextType = document.getElementById("next_type");
-    const nextName = document.getElementById("next_name");
-    const backName = document.getElementById("back_name");
-    const backMessage = document.getElementById("back_message");
+//    const nextName = document.getElementById("next_name");
+//    const backName = document.getElementById("back_name");
+    const backInput = document.getElementById("back_input");
+    const friends = document.getElementById("friends");
+    const fun = document.getElementById("fun");
+    const family = document.getElementById("family");
 
     nextType.onclick = () => {
         changeWindow("next_type");
     }
-    nextName.onclick = () => {
-        changeWindow("next_name");
+    backInput.onclick = () => {
+        changeWindow("back_input");
     }
-    backName.onclick = () => {
-        changeWindow("back_name");
+    friends.onclick = () => {
+        loadImage("card_friend.png");
     }
-    backMessage.onclick = () => {
-        changeWindow("back_message");
+    fun.onclick = () => {
+        loadImage("card_fun.png");
+    }
+    family.onclick = () => {
+        loadImage("card_family.png");
     }
 
 
     function changeWindow(flag){
-//        flag0ならカードのウィンドウを消す。1ならネームのウィンドウを消す。
         switch(flag){
             case "next_type":
 //              ココでカードのウィンドウ消す
                 typeWindow.style.display = "none";
-                nameWindow.style.display = "block";
+                inputWindow.style.display = "block";
                 break;
-            case "next_name":
-//              ネームのウィンドウを消す
-                nameWindow.style.display = "none";
-                messageWindow.style.display = "block";
-                break;
-            case "back_name":
+
+            case "back_input":
                 typeWindow.style.display = "block";
-                nameWindow.style.display = "none";
-                break;
-            case "back_message":
-                nameWindow.style.display = "block";
-                messageWindow.style.display = "none";
+                inputWindow.style.display = "none";
                 break;
             default:
                 break;
         }
+    }
+
+    //    写真をロードする関数
+    function loadImage(file){
+        let image = new Image();
+        image.src = "image/" + file; //動的生成するがテストのため今はこのままで。
+        image.onload = (function(){
+//          ロード完了してからキャンバス準備
+            let canvas = document.getElementById("preview");
+            let ctx = canvas.getContext('2d');
+//          サイズを画像サイズに合わせる
+            canvas.width = image.width;
+            canvas.height = image.height;
+//          キャンバスに画像を描画(開始位置0,0)
+            ctx.drawImage(image, 0, 0);
+        });
+    }
+    function drawText(canvas_id, text_id){
+        let canvas = document.getElementById(canvas_id);
+        let ctx = canvas.getContext('2d');
+        let text = document.getElementById(text_id);
+//      文字スタイル指定
+
+//      座標指定
+        let x = (canvas.width / 2);
+        let y = (canvas.height / 2);
+        ctx.fillText(text.value, x, y)
     }
 
 })();
