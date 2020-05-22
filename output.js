@@ -42,8 +42,4 @@
         let y = (canvas.height / 2);
         ctx.fillText(text.value, x, y)
     }
-
-
-
-
 })();

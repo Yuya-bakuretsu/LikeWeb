@@ -9,52 +9,49 @@
     <link rel="stylesheet" href="reset.css" type="text/css">
     <link rel="stylesheet" href="style.css" type="text/css">
     <title>Suki！</title>
-    <!--    <script src="like.js"></script>-->
+    <link rel="stylesheet" href="topPage.css">
 </head>
 
 <body>
-    <header><img src="./img/logo.svg" alt="logo">
-        <h1>あなたのスキを伝えよう</h1>
-    </header>
-    <div class="wrap_intro">
-        <div class="intro">
-            <p>「Suki！」はあなたのスキを伝える<br>Webサービスです<br>日頃は恥ずかしくて言えないあの人に<br>スキを伝えてみましょう</p>
-            <img src="./img/logo.svg" alt="logo">
-            <div class="suki_link first_link">
-                <p>スキを伝える</p>
-            </div>
-        </div>
-        <div class="description">
-            <h2>つかいかた</h2>
-            <h3>①4つのスキから伝えたいスキを選ぼう</h3>
-            <div class="img_wrapper_1"><img src="./img/description_1.svg" alt="description"></div>
-            <h3>②名前とメッセージを入力しよう</h3>
-            <div class="img_wrapper_2"><img src="./img/description_2.svg" alt="description"></div>
-            <h3>③カードをシェアして気持ちを伝えよう</h3>
-            <div class="img_wrapper_3"><img src="./img/description_3.svg" alt="description"></div>
-        </div>
-        <div class="suki_link second_link">
+<header><img src="./img/logo.svg" alt="logo">
+    <h1>あなたのスキを伝えよう</h1>
+</header>
+<div class="wrap_intro">
+    <div class="intro">
+        <p>「Suki！」はあなたのスキを伝える<br>Webサービスです<br>日頃は恥ずかしくて言えないあの人に<br>スキを伝えてみましょう</p>
+        <img src="./img/logo.svg" alt="logo">
+        <div class="suki_link first_link">
             <p>スキを伝える</p>
         </div>
-        <footer>
-            <div class="wrap_footer_text">
+    </div>
+    <div class="description">
+        <h2>つかいかた</h2>
+        <h3>①4つのスキから伝えたいスキを選ぼう</h3>
+        <div class="img_wrapper_1"><img src="./img/description_1.svg" alt="description"></div>
+        <h3>②名前とメッセージを入力しよう</h3>
+        <div class="img_wrapper_2"><img src="./img/description_2.svg" alt="description"></div>
+        <h3>③カードをシェアして気持ちを伝えよう</h3>
+        <div class="img_wrapper_3"><img src="./img/description_3.svg" alt="description"></div>
+    </div>
+    <div class="suki_link second_link">
+        <p>スキを伝える</p>
+    </div>
+    <footer>
+        <div class="wrap_footer_text">
             <p>©️Suki！</p>
             <a href="">利用規約</a>
             <a href="">Twitter</a>
             <a href="">支援</a>
-            </div>
-        </footer>
-    </div>
-    <div class="wrap_select">
-        <div id="input_form">
-            <form action="result.html" method="get">
+        </div>
+    </footer>
+</div>
+<div class="wrap_select">
+    <div id="input_form">
+        <form action="result.html" method="get">
+            <div id="select_type">
                 <h3>
-                    <label for="input_name">
-                        スキを届けたい相手の名前を入力しよう(8文字以内)
-                    </label>
+                    スキの種類を選ぼう
                 </h3>
-                <input type="text" name="target" id="input_name" maxlength="8">
-                <br>
                 <input name="type" type="radio" value="card_friend" id="friends">
                 <label for="friends">
                     <img src="image/card_friend.png" alt="友人としてのスキを伝える" width="30%" height="30%">
@@ -69,21 +66,39 @@
                 <label for="family">
                     <img src="image/card_family.png" alt="恋人としてのスキを伝える" width="30%" height="30%">
                 </label>
-                <br>
-                <h3>
-                    相手にメッセージを届けよう(30字以内)
-                </h3>
-                <input type="text" maxlength="30" name="message">
-                <div id="display_preview">
-                    プレビュー表示領域
-                </div>
                 <p>
-                    <input type="submit" value="作成する">
+                    <button type="button" id="next_type">OK!</button>
                 </p>
-            </form>
-        </div>
+            </div>
+            <div id="select_input">
+                <div id="select_name">
+                    <h3>
+                        <label for="input_name">
+                            スキを届けたい相手の名前を入力しよう(8文字以内)
+                        </label>
+                    </h3>
+                    <input type="text" name="target" id="input_name" maxlength="8">
+                </div>
+                <div id="select_message">
+                    <h3>
+                        相手にメッセージを届けよう(30字以内)
+                    </h3>
+                    <input type="text" maxlength="30" name="message">
+                    <p>
+                        <button type="button" id="back_input">戻る</button>
+                    </p>
+                </div>
+            </div>
+
+            <div id="display_preview">
+                <canvas id="preview"></canvas>
+            </div>
+            <p>
+                <input type="submit" value="作成する">
+            </p>
+        </form>
     </div>
-
+</div>
+<script src="like.js"></script>
 </body>
-
 </html>
