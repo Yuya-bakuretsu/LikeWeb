@@ -19,6 +19,8 @@
     const family = document.getElementById("family");
     const inputName = document.getElementById("input_name");
     const inputMessage = document.getElementById("input_message");
+    const resetButton = document.getElementById("reset");
+    const nextMessage = document.getElementById("next_message");
 
     nextType.onclick = () => {
         changeWindow("next_type");
@@ -41,12 +43,23 @@
     sukiLink2.onclick = () => {
         changeWindow("link2");
     }
-    inputName.onkeyup = () => {
-        drawText(0);
+//    inputName.onkeyup = () => {
+//        drawText(0);
+//    }
+//    inputMessage.onkeyup = () => {
+//        drawText(1);
+//    }
+    reset.onclick = () => {
+        loadImage(document.getElementById("form_input").type.value + ".png");
+        inputMessage.value = "";
+        inputName.value = "";
     }
-    inputMessage.onkeyup = () => {
-        drawText(1);
+    nextMessage.onclick = () => {
+        drawText();
     }
+
+
+
 
 
     function changeWindow(flag){
@@ -90,23 +103,17 @@
 
     const canvas = document.getElementById("preview");
     const ctx = canvas.getContext('2d');
-    function drawText(text_id){
-        let text;
-            if(text_id){
-                text = inputMessage.value;
-            }else{
-                text = inputName.value;
-            }
-
-
-
+    function drawText(){
+        let text_name = inputName.value;
+        let text_message = inputMessage.value;
 //      文字スタイル指定
-
         ctx.font = '32px serif';
 //      座標指定
-        let x = (canvas.width / 2);
-        let y = (canvas.height / 2);
-        ctx.fillText(text, x, y);
+        let x_name = (canvas.width / 3);
+        let y_name = (canvas.height / 3);
+        let x_message = (canvas.width / 2);
+        let y_message = (canvas.height / 2);
+        ctx.fillText(text_name, x_name, y_name);
+        ctx.fillText(text_message, x_message, y_message);
     }
-
 })();
