@@ -1,0 +1,299 @@
+body {
+  background-color: #FFE9EF;
+  font-family: "Hiragino Maru Gothic Pro";
+}
+header{
+  background-color: white;
+  width: 100%;
+  height: 124px;
+  border-bottom: solid 5px #8CE3FF;
+}
+header h1 {
+  font-size: 15;
+  text-align: center;
+  margin-top: -22px;
+  color: #FFA6BE;
+}
+header img {
+  width: 113px;
+  height: 113px;
+  margin: -5px auto 0 auto;
+  display: block;
+}
+.wrap_intro {
+  text-align: center;
+}
+.intro p {
+  padding-top: 20px;
+  color: #FFA6BE;
+  font-size: 15px;
+  line-height: 23px;
+}
+.intro img {
+  margin-top: -10px;
+  width: 113px;
+  height: 113px;
+}
+.intro{
+    width: 85%;
+    height: 303px;
+    margin: 27px auto 0 auto;
+    background-color: white;
+    border-radius: 10px;
+}
+.suki_link button{
+  background-color: #8CE3FF;
+  width: 212px;
+  height: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
+  border:0;
+}
+.suki_link p {
+  padding-top: 0;
+  font-size: 20px;
+  color: white;
+}
+.first_link button{
+  margin:-8px auto 31px auto;
+}
+.description {
+  margin: 32px auto 0 auto;
+}
+.description h2 {
+  font-size: 20px;
+  text-align: center;
+  color: #424242;
+}
+.description h3 {
+  font-size: 17px;
+  text-align: center;
+  color: #424242;
+  margin: 20px auto 0 auto;
+}
+.description .img_wrapper_1 img{
+  margin-top: 15px;
+  width: 212px;
+  height: 212px;
+}
+.description .img_wrapper_2 img{
+  margin-top: 15px;
+  width: 212px;
+  height: 212px;
+}
+.description .img_wrapper_3 img{
+  margin-top: 15px;
+  width: 212px;
+  height: 212px;
+}
+.second_link {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+footer {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  border-top: solid 5px #8CE3FF;
+  font-size: 15px;
+  color: #424242;
+}
+footer p {
+  display: inline-block;
+}
+footer a {
+  text-decoration: none;
+  display: inline-block;
+  color: #424242;
+  margin-left: 15px;
+}
+.wrap_footer_text{
+  margin-top: 25px;
+}
+
+
+
+
+.wrap_select {
+  margin: 23px auto 20px auto;
+  background-color: white;
+  border-radius: 23px;
+  width: 85%;
+  display: none;
+  text-align: center;
+}
+.wrap_select h3 {
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  color: #383838;
+  padding-top: 10px;
+}
+.back {
+  padding: 18px 0 0 22px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  display: flex;
+}
+.back img {
+  margin-top: -1px;
+  margin-right: 4px;
+}
+.wrap_choice {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;
+}
+.wrap_choice p {
+  text-align: center;
+  font-size: 10px;
+}
+input[type=radio] {
+  display: none; 
+  }
+.friends_choice {
+  width: 123.53px;
+  height: 121px; 
+  background-color: #FFFCBE;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  border: none;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.friends_choice img {
+  margin-top: 13px;
+}
+.friends_choice p {
+  margin-top: 10px;
+  color: #FFC200;
+}
+.fun_choice {
+  width: 123.53px;
+  height: 121px; 
+  background-color: #FFE3AC;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  border: none;
+  margin-top: 20px;
+}
+.fun_choice img {
+  margin-top: 16px;
+}
+.fun_choice p {
+  margin-top: 15px;
+  color: #FF8F5F;
+}
+.family_choice {
+  width: 123.53px;
+  height: 121px; 
+  background-color: #FFDADA;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  border: none;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.family_choice img {
+  margin-top: 22px;
+}
+.family_choice p {
+  margin-top: 15px;
+  color: #FF7C7C;
+}
+.longing_choice {
+  width: 123.53px;
+  height: 121px; 
+  background-color: #81BB91;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  border: none;
+  margin-top: 20px;
+}
+.longing_choice img {
+  margin-top: 22px;
+}
+.longing_choice p {
+  margin-top: 15px;
+  color: #E9FD00;
+}
+.third_link {
+  margin-top: 33px;
+}
+
+
+
+
+.name_style {
+  margin-top: 35px;
+  font-size: 16px;
+}
+.select_textbox{
+  background-color: white;
+  width: 238px;
+  height: 38px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 3px solid #A5E9FF;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Hiragino Maru Gothic Pro";
+  margin-top: 13px;
+}
+.message_style {
+  font-size: 16px;
+  margin-top: 20px;
+}
+.type_button {
+  display: flex;
+  justify-content: center;
+}
+.next_button button{
+  width: 138px;
+  height: 41px;
+  margin: 35px 6px 0 0;
+}
+.next_button p {
+  font-size: 12px;
+}
+.reset_button button {
+  width: 138px;
+  height: 41px;
+  margin: 35px 6px 0 10px;
+}
+.reset_button p {
+  font-size: 12px;
+}
+.generate_button {
+  background-color: #FFA6BE;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
+  width: 212px;
+  height: 64px;
+  font-size: 20px;
+  color: white;
+  margin-top: 30px;
+}
+
+
+
+
+
+
+.display_style {
+  margin-top: 43px;
+}
+.display_style p {
+  font-size: 13px;
+  text-align: left;
+  margin-left: 35px;
+}
+.preview_style {
+  margin-top: 10px;
+  width: 270px;
+  height: 140px;
+  margin-bottom: 20px;
+}
+
