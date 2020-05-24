@@ -11,6 +11,7 @@
     const sukiLink1 = document.getElementById("link1");
     const sukiLink2 = document.getElementById("link2");
 //    const backType = document.getElementById("back_type");
+
     const nextType = document.getElementById("next_type");
 //    const nextName = document.getElementById("next_name");
 //    const backName = document.getElementById("back_name");
@@ -24,10 +25,12 @@
     const resetButton = document.getElementById("reset");
     const nextMessage = document.getElementById("next_message");
     const displayPreview = document.getElementById("display_preview");
+
 //
 //    backType.onclick = () => {
 //        changeWindow("back_type");
 //    }
+
 
     nextType.onclick = () => {
         changeWindow("next_type");
@@ -105,6 +108,7 @@
 
             case "back_type":
                 intro.style.display = "block";
+                selectWindow.style.display = "none";
                 typeWindow.style.display = "none";
                 break;
 
@@ -121,8 +125,9 @@
             case "link1":
             case "link2":
                 intro.style.display = "none";
-                selectWindow.style.display = "block";
+                typeWindow.style.display = "block";
                 inputWindow.style.display = "none";
+                selectWindow.style.display = "block";
                 break;
             default:
                 break;
@@ -153,12 +158,13 @@
         let text_name = inputName.value;
         let text_message = inputMessage.value;
 //      文字スタイル指定
-        ctx.font = '32px serif';
+        ctx.font = '45px Hiragino Maru Gothic Pro';
+        ctx.textAlign = "center";
 //      座標指定
-        let x_name = (canvas.width / 1.5);
+        let x_name = (canvas.width / 1.53);
         let y_name = (canvas.height / 3);
-        let x_message = (canvas.width / 1.6);
-        let y_message = (canvas.height / 1.35);
+        let x_message = (canvas.width / 1.54);
+        let y_message = (canvas.height / 1.38);
         switch(cardType){
             case "card_friend":
                 cardType = "が友達として";
@@ -174,6 +180,7 @@
                 break;
         }
         ctx.fillText(text_name + cardType, x_name, y_name);
+        ctx.font = '24px Hiragino Maru Gothic Pro';
         ctx.fillText(text_message, x_message, y_message);
     }
 })();

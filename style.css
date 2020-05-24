@@ -175,13 +175,27 @@ input[type=radio] {
   border: none;
   margin-top: 20px;
   margin-right: 20px;
+
+  transition: all 800ms 0s ease;
 }
-.friends_choice img {
+.friends_choice svg {
   margin-top: 13px;
+  fill: #FFC200;
 }
 .friends_choice p {
   margin-top: 10px;
   color: #FFC200;
+}
+
+.friends_choice.valid_button {
+  background-color: #FFC200;
+  fill: #FFFCBE;
+}
+.friends_choice.valid_button svg {
+  fill: #FFFCBE;
+}
+.friends_choice.valid_button p {
+  color: #FFFCBE;
 }
 .fun_choice {
   width: 123.53px;
@@ -191,13 +205,26 @@ input[type=radio] {
   border-radius: 30px;
   border: none;
   margin-top: 20px;
+
+  transition: all 800ms 0s ease;
 }
-.fun_choice img {
+.fun_choice svg {
   margin-top: 16px;
+  fill: #FF8F5F;
 }
 .fun_choice p {
   margin-top: 15px;
   color: #FF8F5F;
+}
+
+.fun_choice.valid_button{
+  background-color: #FF8F5F;
+}
+.fun_choice.valid_button p {
+  color: #FFE3AC;
+}
+.fun_choice.valid_button svg {
+  fill: #FFE3AC;
 }
 .family_choice {
   width: 123.53px;
@@ -208,30 +235,53 @@ input[type=radio] {
   border: none;
   margin-top: 20px;
   margin-right: 20px;
+  transition: all 800ms 0s ease;
 }
-.family_choice img {
+.family_choice svg {
   margin-top: 22px;
+  fill: #FF7C7C;
 }
 .family_choice p {
   margin-top: 15px;
   color: #FF7C7C;
 }
+.family_choice.valid_button {
+  background-color: #FF7C7C;
+}
+.family_choice.valid_button p {
+  color: #FFDADA;
+}
+.family_choice.valid_button svg {
+  fill: #FFDADA;
+}
 .longing_choice {
   width: 123.53px;
   height: 121px; 
-  background-color: #81BB91;
+  background-color: #819CBB;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   border: none;
   margin-top: 20px;
+  transition: all 800ms 0s ease;
 }
-.longing_choice img {
+.longing_choice svg {
   margin-top: 22px;
+  fill: #E9FD00;
 }
 .longing_choice p {
   margin-top: 15px;
   color: #E9FD00;
 }
+.longing_choice.valid_button {
+  background-color: #F6FF8D;
+}
+.longing_choice.valid_button p {
+  color: #819CBB;
+}
+.longing_choice.valid_button svg {
+  fill: #819CBB;
+}
+
 .third_link {
   margin-top: 33px;
 }
@@ -293,11 +343,6 @@ input[type=radio] {
     -webkit-transform: translateY(4px);
     transform: translateY(4px);
 }
-
-
-
-
-
 
 .display_style {
   margin-top: 43px;
