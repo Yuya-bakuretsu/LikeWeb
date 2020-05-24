@@ -38,19 +38,19 @@
     }
     friends.onclick = () => {
         inputMessage.value = "いつもありがとう😭";
-        loadImage("handShake");
+        loadImage("card_friend");
     }
     fun.onclick = () => {
         inputMessage.value = "生きてるだけで感謝😇";
-        loadImage("cheering");
+        loadImage("card_fun");
     }
     family.onclick = () => {
         inputMessage.value = "いつも支えられています🙏";
-        loadImage("house");
+        loadImage("card_family");
     }
     longing.onclick = () => {
         inputMessage.value = "いつか追いついてみせます🤝";
-        loadImage("twinkle");
+        loadImage("card_longing");
     }
     sukiLink1.onclick = () => {
         changeWindow("link1");
