@@ -10,7 +10,7 @@
     const selectWindow = document.getElementById("select_window");
     const sukiLink1 = document.getElementById("link1");
     const sukiLink2 = document.getElementById("link2");
-//    const backType = document.getElementById("back_type");
+    const backType = document.getElementById("back_type");
 
     const nextType = document.getElementById("next_type");
 //    const nextName = document.getElementById("next_name");
@@ -26,10 +26,10 @@
     const nextMessage = document.getElementById("next_message");
     const displayPreview = document.getElementById("display_preview");
 
-//
-//    backType.onclick = () => {
-//        changeWindow("back_type");
-//    }
+
+    backType.onclick = () => {
+        changeWindow("back_type");
+    }
 
 
     nextType.onclick = () => {

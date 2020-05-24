@@ -79,7 +79,7 @@
      document.getElementById("download").onclick = (event) => {
          let link = document.createElement("a");
          link.href = canvas.toDataURL("image/png");
-         link.download = "test.png";
+         link.download = "card.png";
          link.click();
      }
 })();
