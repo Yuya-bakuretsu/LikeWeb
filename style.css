@@ -3,6 +3,8 @@ body {
   font-family: "Hiragino Maru Gothic Pro";
   max-width: 450px;
   margin: 0 auto 0 auto;
+  text-align: center;
+  font-family: "Hiragino Maru Gothic Pro";
 }
 header{
   background-color: white;
@@ -21,9 +23,6 @@ header img {
   height: 113px;
   margin: -5px auto 0 auto;
   display: block;
-}
-.wrap_intro {
-  text-align: center;
 }
 .intro p {
   padding-top: 20px;
@@ -156,7 +155,7 @@ footer a {
 }
 .wrap_choice {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   flex-wrap: wrap;
 }
 .wrap_choice p {
@@ -164,11 +163,11 @@ footer a {
   font-size: 10px;
 }
 input[type=radio] {
-  display: none; 
+  display: none;
   }
 .friends_choice {
   width: 123.53px;
-  height: 121px; 
+  height: 121px;
   background-color: #FFFCBE;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
@@ -199,7 +198,7 @@ input[type=radio] {
 }
 .fun_choice {
   width: 123.53px;
-  height: 121px; 
+  height: 121px;
   background-color: #FFE3AC;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
@@ -228,7 +227,7 @@ input[type=radio] {
 }
 .family_choice {
   width: 123.53px;
-  height: 121px; 
+  height: 121px;
   background-color: #FFDADA;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
@@ -256,7 +255,7 @@ input[type=radio] {
 }
 .longing_choice {
   width: 123.53px;
-  height: 121px; 
+  height: 121px;
   background-color: #819CBB;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
@@ -357,4 +356,40 @@ input[type=radio] {
   width: 270px;
   height: 140px;
   margin-bottom: 20px;
+}
+
+.display_style {
+  width: 85%;
+  height: 120%;
+  margin: 27px auto 0 auto;
+  background-color: white;
+  border-radius: 10px;
+}
+.display_style h3 {
+  padding-top: 20px;
+  margin-bottom: 20px;
+  line-height: 25px;
+  color: #FFA6BE;
+}
+.result_button {
+  margin: 0 auto 40px auto;
+}
+.generate_button button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+}
+.generate_button.result_button p {
+  color: #FFFFFF;
+  font-size: 20px;
+  margin:auto auto auto auto;
+}
+.result_text_wrap {
+  margin:16px auto auto auto;
+}
+.wrap_resultButton {
+  padding-bottom: 1px;
+  margin-bottom: 50px;
 }
