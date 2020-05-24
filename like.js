@@ -156,10 +156,10 @@
 //      文字スタイル指定
         ctx.font = '32px serif';
 //      座標指定
-        let x_name = (canvas.width / 3);
+        let x_name = (canvas.width / 1.5);
         let y_name = (canvas.height / 3);
-        let x_message = (canvas.width * 2 / 3);
-        let y_message = (canvas.height * 2 / 3);
+        let x_message = (canvas.width / 1.6);
+        let y_message = (canvas.height / 1.35);
         switch(cardType){
             case "card_friend":
                 cardType = "が友達として";
