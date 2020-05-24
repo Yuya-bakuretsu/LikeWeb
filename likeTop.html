@@ -56,7 +56,7 @@
                 <h3>
                     スキの種類を選ぼう
                 </h3>
-                <input name="type" type="radio" value="card_friend" id="friends">
+                <input name="type" type="radio" value="card_friend" id="friends" checked>
                 <label for="friends">
                     <img src="image/card_friend.png" alt="友人としてのスキを伝える" width="30%" height="30%">
                 </label>
@@ -70,7 +70,13 @@
                 <label for="family">
                     <img src="image/card_family.png" alt="恋人としてのスキを伝える" width="30%" height="30%">
                 </label>
+                <br>
+                <input name="type" type="radio" value="card_longing" id="longing">
+                <label for="longing">
+                    <img src="image/card_longing.png" alt="憧れとしてのスキを伝える" width="30%" height="30%">
+                </label>
                 <p>
+                    <button type="button" id="back_type">戻る</button>
                     <button type="button" id="next_type">OK!</button>
                 </p>
             </div>
@@ -81,7 +87,7 @@
                             スキを届けたい相手の名前を入力しよう(8文字以内)
                         </label>
                     </h3>
-                    <input type="text" name="target" id="input_name" maxlength="8">
+                    <input type="text" name="target" id="input_name" maxlength="8" value="あなた">
                 </div>
                 <div id="select_message">
                     <h3>
@@ -89,7 +95,7 @@
                     </h3>
                     <input type="text" maxlength="30" name="message" id="input_message">
                     <p>
-                        <button type="button" id="next_message">OK!</button>
+                        <button type="button" id="next_message">試す</button>
                         <button type="button" id="back_input">戻る</button>
                         <button type="button" id="reset">リセット</button>
                     </p>

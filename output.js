@@ -17,7 +17,7 @@
 //    写真をロードする関数
     function loadImage(id){
         let image = new Image();
-        image.src = "image/" + queryList.type + ".png"; //動的生成するがテストのため今はこのままで。
+        image.src = "image/" + queryList.type + ".svg"; //動的生成するがテストのため今はこのままで。
         image.onload = (function(){
 //          ロード完了してからキャンバス準備
             let canvas = document.getElementById(id);
@@ -40,9 +40,24 @@
 //      座標指定
         let x_name = (canvas.width / 3);
         let y_name = (canvas.height / 3);
-        let x_message = (canvas.width / 2);
-        let y_message = (canvas.height / 2);
-        ctx.fillText(text_name, x_name, y_name);
+        let x_message = (canvas.width * 2 / 3);
+        let y_message = (canvas.height * 2 / 3);
+        let cardType = "が友達として";
+        switch(queryList.type){
+            case "card_friend":
+                cardType = "が友達として";
+                break;
+            case "card_family":
+                cardType = "が家族として";
+                break;
+            case "card_fun":
+                cardType = "が推しとして";
+                break;
+            case "card_longing":
+                cardType = "が憧れとして";
+                break;
+        }
+        ctx.fillText(text_name + cardType, x_name, y_name);
         ctx.fillText(text_message, x_message, y_message);
     }
 })();
