@@ -17,7 +17,7 @@
 //    写真をロードする関数
     function loadImage(id){
         let image = new Image();
-        image.src = "image/" + queryList.type + ".svg"; //動的生成するがテストのため今はこのままで。
+        image.src = "img/" + queryList.type + ".svg"; //動的生成するがテストのため今はこのままで。
         image.onload = (function(){
 //          ロード完了してからキャンバス準備
             let canvas = document.getElementById(id);
@@ -44,16 +44,16 @@
         let y_message = (canvas.height * 2 / 3);
         let cardType = "が友達として";
         switch(queryList.type){
-            case "card_friend":
+            case "card":
                 cardType = "が友達として";
                 break;
-            case "card_family":
+            case "house":
                 cardType = "が家族として";
                 break;
-            case "card_fun":
+            case "cheering":
                 cardType = "が推しとして";
                 break;
-            case "card_longing":
+            case "twinkle":
                 cardType = "が憧れとして";
                 break;
         }

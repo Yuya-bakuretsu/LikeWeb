@@ -13,129 +13,143 @@
 </head>
 
 <body>
-    <header><img src="./img/logo.svg" alt="logo">
-        <h1>あなたのスキを伝えよう</h1>
-    </header>
-    <div class="wrap_intro" id="intro">
-        <div class="intro">
-            <p>「Suki！」はあなたのスキを伝える<br>Webサービスです<br>日頃は恥ずかしくて言えないあの人に<br>スキを伝えてみましょう</p>
-            <img src="./img/logo.svg" alt="logo">
-            <div class="suki_link first_link">
-                <button type="button" id="link1">
-                    <p>スキを伝える</p>
-                </button>
-            </div>
-        </div>
-        <div class="description">
-            <h2>つかいかた</h2>
-            <h3>①4つのスキから伝えたいスキを選ぼう</h3>
-            <div class="img_wrapper_1"><img src="./img/description_1.svg" alt="description"></div>
-            <h3>②名前とメッセージを入力しよう</h3>
-            <div class="img_wrapper_2"><img src="./img/description_2.svg" alt="description"></div>
-            <h3>③カードをシェアして気持ちを伝えよう</h3>
-            <div class="img_wrapper_3"><img src="./img/description_3.svg" alt="description"></div>
-        </div>
-        <div class="suki_link second_link">
-            <button type="button" id="link2">
+<header><img src="./img/logo.svg" alt="logo">
+    <h1>あなたのスキを伝えよう</h1>
+</header>
+<div class="wrap_intro" id="intro">
+    <div class="intro">
+        <p>「Suki！」はあなたのスキを伝える<br>Webサービスです<br>日頃は恥ずかしくて言えないあの人に<br>スキを伝えてみましょう</p>
+        <img src="./img/logo.svg" alt="logo">
+        <div class="suki_link first_link">
+            <button type="button" id="link1">
                 <p>スキを伝える</p>
             </button>
         </div>
-        <footer>
-            <div class="wrap_footer_text">
-                <p>©️Suki！</p>
-                <a href="">利用規約</a>
-                <a href="">Twitter</a>
-                <a href="">支援</a>
-            </div>
-        </footer>
     </div>
-    <div class="wrap_select" id="select_window">
-        <div class="back">
-            <img src="./img/arrow.svg" alt="arrow">
-            <button type="button" id="back_input">
-                <p>戻る</p>
-            </button>
+    <div class="description">
+        <h2>つかいかた</h2>
+        <h3>①4つのスキから伝えたいスキを選ぼう</h3>
+        <div class="img_wrapper_1"><img src="./img/description_1.svg" alt="description"></div>
+        <h3>②名前とメッセージを入力しよう</h3>
+        <div class="img_wrapper_2"><img src="./img/description_2.svg" alt="description"></div>
+        <h3>③カードをシェアして気持ちを伝えよう</h3>
+        <div class="img_wrapper_3"><img src="./img/description_3.svg" alt="description"></div>
+    </div>
+    <div class="suki_link second_link">
+        <button type="button" id="link2">
+            <p>スキを伝える</p>
+        </button>
+    </div>
+    <footer>
+        <div class="wrap_footer_text">
+            <p>©️Suki！</p>
+            <a href="https://twitter.com/designer_raika">Twitter</a>
         </div>
-        <div id="input_form">
-            <form action="result.html" method="get" id="form_input">
-                <div id="select_type">
-                    <h3>
-                        伝えたいスキを選ぼう
-                    </h3>
-                    <div class="wrap_choice">
-                        <input name="type" type="radio" value="card_friend" id="friends">
-                        <label for="friends">
-                            <div class="friends_choice">
-                                <img src="./img/handShake.svg" alt="握手">
-                                <p>友達としてのスキ</p>
-                            </div>
-                        </label>
-                        <input name="type" type="radio" value="card_fun" id="fun">
-                        <label for="fun">
-                            <div class="fun_choice">
-                                <img src="./img/cheering.svg" alt="応援">
-                                <p>推しとしてのスキ</p>
-                            </div>
-                        </label>
-                        <input name="type" type="radio" value="card_family" id="family">
-                        <label for="family">
-                            <div class="family_choice">
-                                <img src="./img/house.svg" alt="家">
-                                <p>家族としてのスキ</p>
-                            </div>
-                        </label>
-                        <input name="type" type="radio" value="card_longing" id="longing">
-                        <label for="longing">
-                            <div class="longing_choice">
-                                <img src="./img/twinkle.svg" alt="キラキラ">
-                                <p>家族としてのスキ</p>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="suki_link third_link">
-                        <button type="button" id="next_type">
-                            <p>スキを決定</p>
-                        </button>
-                    </div>
+    </footer>
+</div>
+<div class="wrap_select" id="select_window">
+    <div id="input_form">
+        <form action="result.html" method="get" id="form_input">
+            <div id="select_type">
+                <div class="back">
+                    <img src="./img/arrow.svg" alt="arrow">
+                    <button type="button" id="back_type">
+                        <p>戻る</p>
+                    </button>
                 </div>
-                <div id="select_input">
-                    <h3>名前とメッセージを入力</h3>
-                    <div class="name_style" id="select_name">
-                        <label for="input_name">
-                            <p>伝えたい人の名前を入力(~8文字)</p>
-                            <input class="select_textbox" type="text" name="target" id="input_name" maxlength="8">
-                        </label>
-                    </div>
-                    <div class="message_style" id="select_message">
-                        <label for="input_message">
-                            <p>メッセージをどうぞ(~30字)</p>
-                            <input class="select_textbox" type="text" maxlength="30" name="message" id="input_message">
-                        </label>
-                        <div class="type_button">
-                            <div class="suki_link next_button">
-                                <button type="button" id="next_message">
-                                    <p>プレビューを更新</p>
-                                </button></div>
-                            <div class="suki_link reset_button">
-                                <button type="button" id="reset">
-                                    <p>プレビューをリセット</p>
-                                </button>
-                            </div>
+                <h3>
+                    伝えたいスキを選ぼう
+                </h3>
+                <div class="wrap_choice">
+                    <input name="type" type="radio" value="card_friend" id="friends" checked>
+                    <label for="friends">
+                        <div class="friends_choice">
+                            <img src="./img/handShake.svg" alt="握手">
+                            <p>友達としてのスキ</p>
+                        </div>
+                    </label>
+                    <br>
+                    <input name="type" type="radio" value="card_fun" id="fun">
+                    <label for="fun">
+                        <div class="fun_choice">
+                            <img src="./img/cheering.svg" alt="応援">
+                            <p>推しとしてのスキ</p>
+                        </div>
+                    </label>
+                    <br>
+                    <input name="type" type="radio" value="card_family" id="family">
+                    <label for="family">
+                        <div class="family_choice">
+                            <img src="./img/house.svg" alt="家">
+                            <p>家族としてのスキ</p>
+                        </div>
+                    </label>
+                    <br>
+                    <input name="type" type="radio" value="card_longing" id="longing">
+                    <label for="longing">
+                        <div class="longing_choice">
+                            <img src="./img/twinkle.svg" alt="キラキラ">
+                            <p>家族としてのスキ</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="suki_link third_link">
+                    <button type="button" id="next_type">
+                        <p>スキを決定</p>
+                    </button>
+                    <!--                    <p>-->
+                    <!--                        <button type="button" id="back_type">戻る</button>-->
+                    <!--                        <button type="button" id="next_type">OK!</button>-->
+                    <!--                    </p>-->
+                </div>
+            </div>
+            <div id="select_input">
+                <div class="back">
+                    <img src="./img/arrow.svg" alt="arrow">
+                    <button type="button" id="back_input">
+                        <p>戻る</p>
+                    </button>
+                </div>
+                <h3>
+                    名前とメッセージを入力
+                </h3>
+                <div class="name_style" id="select_name">
+                    <label for="input_name">
+                        <p>伝えたい人の名前を入力(~8文字)</p>
+                        <input class="select_textbox" type="text" name="target" id="input_name" maxlength="8"
+                               value="あなた">
+                    </label>
+                </div>
+                <div class="message_style" id="select_message">
+                    <label for="input_message">
+                        <p>メッセージをどうぞ(~15字)</p>
+                        <input class="select_textbox" type="text" maxlength="15" name="message" id="input_message">
+                    </label>
+                    <div class="type_button">
+                        <div class="suki_link next_button">
+                            <button type="button" id="next_message">
+                                <p>プレビューを更新</p>
+                            </button>
+                        </div>
+                        <div class="suki_link reset_button">
+                            <button type="button" id="reset">
+                                <p>プレビューをリセット</p>
+                            </button>
+                            <!--                        <button type="button" id="back_input">戻る</button>-->
                         </div>
                     </div>
-                    <p>
-                        <input class="generate_button" type="submit" value="カードを制作">
-                    </p>
                 </div>
-                <div class="display_style" id="display_preview">
-                    <p>プレビューが表示されます</p>
-                    <canvas class="preview_style" id="preview"></canvas>
-                </div>
-
-            </form>
-        </div>
+                <p>
+                    <input class="generate_button" type="submit" value="カードを制作">
+                </p>
+            </div>
+            <div class="display_style" id="display_preview">
+                <p>プレビューが表示されます</p>
+                <canvas class="preview_style" id="preview"></canvas>
+            </div>
+        </form>
     </div>
-    <script src="like.js"></script>
+</div>
+<script src="like.js"></script>
 </body>
-
 </html>
