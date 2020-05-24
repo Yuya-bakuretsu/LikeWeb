@@ -30,7 +30,7 @@
             drawText();
         });
     }
-    let canvas = document.getElementById("preview");
+    const canvas = document.getElementById("preview");
     const ctx = canvas.getContext('2d');
     function drawText(){
         let text_name = queryList.target;
@@ -68,5 +68,14 @@
         link.download = "test.png";
         link.click();
      }
+
+     document.getElementById("download").onclick = (event) => {
+         let link = document.createElement("a");
+         link.href = canvas.toDataURL("image/png");
+         link.download = "test.png";
+         link.click();
+     }
+
+
 
 })();
