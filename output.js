@@ -38,22 +38,22 @@
 //      文字スタイル指定
         ctx.font = '32px serif';
 //      座標指定
-        let x_name = (canvas.width / 3);
+        let x_name = (canvas.width / 1.5);
         let y_name = (canvas.height / 3);
-        let x_message = (canvas.width * 2 / 3);
-        let y_message = (canvas.height * 2 / 3);
+        let x_message = (canvas.width / 1.6);
+        let y_message = (canvas.height / 1.35);
         let cardType = "が友達として";
         switch(queryList.type){
-            case "card":
+            case "card_friend":
                 cardType = "が友達として";
                 break;
-            case "house":
+            case "card_family":
                 cardType = "が家族として";
                 break;
-            case "cheering":
+            case "card_fun":
                 cardType = "が推しとして";
                 break;
-            case "twinkle":
+            case "card_longing":
                 cardType = "が憧れとして";
                 break;
         }
