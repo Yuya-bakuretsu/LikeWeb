@@ -28,7 +28,6 @@
 //          キャンバスに画像を描画(開始位置0,0)
             ctx.drawImage(image, 0, 0);
             drawText();
-            // ツイートエリアの作成
         });
     }
     const canvas = document.getElementById("preview");
@@ -64,9 +63,10 @@
         const tweetDivided = document.getElementById("tweet-area");
         const anchor = document.createElement('a');
         const hrefValue =　'https://twitter.com/intent/tweet?button_hashtag=suki&ref_src=twsrc%5Etfw';
+        const link = canvas.toDataURL("image/png");
         anchor.setAttribute('href', hrefValue);
         anchor.className = 'twitter-hashtag-button';
-        anchor.setAttribute('data-text', canvas.toDataURL("image/png"));
+        anchor.setAttribute('data-text', link);
         anchor.innerText = 'Tweet #suki';
         tweetDivided.appendChild(anchor);
 
