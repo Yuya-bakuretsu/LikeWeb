@@ -28,6 +28,7 @@
 //          キャンバスに画像を描画(開始位置0,0)
             ctx.drawImage(image, 0, 0);
             drawText();
+            // ツイートエリアの作成
         });
     }
     const canvas = document.getElementById("preview");
@@ -59,23 +60,26 @@
         }
         ctx.fillText(text_name + cardType, x_name, y_name);
         ctx.fillText(text_message, x_message, y_message);
+
+        const tweetDivided = document.getElementById("tweet-area");
+        const anchor = document.createElement('a');
+        const hrefValue =　'https://twitter.com/intent/tweet?button_hashtag=suki&ref_src=twsrc%5Etfw';
+        anchor.setAttribute('href', hrefValue);
+        anchor.className = 'twitter-hashtag-button';
+        anchor.setAttribute('data-text', canvas.toDataURL("image/png"));
+        anchor.innerText = 'Tweet #suki';
+        tweetDivided.appendChild(anchor);
+
+        const script = document.createElement('script');
+        script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
+        tweetDivided.appendChild(script);
     }
-     document.getElementById("download").onclick = (event) => {
-        canvas = document.getElementById("preview");
-        console.log(canvas);
-        let link = document.createElement("a");
-        link.href = canvas.toDataURL("image/png");
-        link.download = "test.png";
-        link.click();
-     }
 
-     document.getElementById("download").onclick = (event) => {
-         let link = document.createElement("a");
-         link.href = canvas.toDataURL("image/png");
-         link.download = "test.png";
-         link.click();
-     }
-
-
+//     document.getElementById("download").onclick = (event) => {
+//         let link = document.createElement("a");
+//         link.href = canvas.toDataURL("image/png");
+//         link.download = "test.png";
+//         link.click();
+//     }
 
 })();
