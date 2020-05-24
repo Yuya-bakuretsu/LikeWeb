@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
-    <title>結果出力画面</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="./img/favicon.ico">
+    <title>カードを共有しよう</title>
+
 <body>
-<header><img src="./img/logo.svg" alt="logo">
-    <h1>あなたのスキを伝えよう</h1>
-</header>
-<div class="display_style" id="display_preview">
-    <canvas class="preview_style" id="preview"></canvas>
-</div>
-<div id="tweet-area"></div>
-<button id="download">download</button>
-<footer>
-    <div class="wrap_footer_text">
-        <p>©️Suki！</p>
-        <a href="">利用規約</a>
-        <a href="">Twitter</a>
-        <a href="">支援</a>
+    <header><img src="./img/logo.svg" alt="logo">
+        <h1>あなたのスキを伝えよう</h1>
+    </header>
+    <div class="display_style" id="display_preview">
+        <h3>サービスを利用してくれてありがとう！<br>画像をスキな人に送りましょう！</h3>
+        <canvas class="preview_style" id="preview"></canvas>
+        <div id="tweet-area"></div>
+        <div class="wrap_resultButton">
+            <div class="generate_button result_button">
+                <button id="download">
+                    <div class="result_text_wrap">
+                        <p>ダウンロードする</p>
+                    </div>
+                </button>
+            </div>
+        </div>
     </div>
-</footer>
-<script src="output.js"></script>
+    <footer>
+        <div class="wrap_footer_text">
+            <p>©️Suki！</p>
+            <a href="https://twitter.com/designer_raika" target="_blank">Twitter</a>
+        </div>
+    </footer>
+    <script src="output.js"></script>
 </body>
+
 </html>
