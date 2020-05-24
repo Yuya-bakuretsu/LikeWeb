@@ -38,19 +38,19 @@
     }
     friends.onclick = () => {
         inputMessage.value = "いつもありがとう😭";
-        loadImage("card_friend");
+        loadImage("handShake");
     }
     fun.onclick = () => {
         inputMessage.value = "生きてるだけで感謝😇";
-        loadImage("card_fun");
+        loadImage("cheering");
     }
     family.onclick = () => {
         inputMessage.value = "いつも支えられています🙏";
-        loadImage("card_family");
+        loadImage("house");
     }
     longing.onclick = () => {
         inputMessage.value = "いつか追いついてみせます🤝";
-        loadImage("card_longing");
+        loadImage("twinkle");
     }
     sukiLink1.onclick = () => {
         changeWindow("link1");
@@ -132,7 +132,7 @@
     //    写真をロードする関数
     function loadImage(file){
         let image = new Image();
-        image.src = "image/" + file + ".svg"; //動的生成するがテストのため今はこのままで。
+        image.src = "img/" + file + ".svg"; //動的生成するがテストのため今はこのままで。
         image.onload = (function(){
 //          ロード完了してからキャンバス準備
             let canvas = document.getElementById("preview");
