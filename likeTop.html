@@ -54,60 +54,86 @@
         <form action="result.html" method="get" id="form_input">
             <div id="select_type">
                 <h3>
-                    スキの種類を選ぼう
+                    伝えたいスキを選ぼう
                 </h3>
-                <input name="type" type="radio" value="card_friend" id="friends" checked>
-                <label for="friends">
-                    <img src="image/card_friend.png" alt="友人としてのスキを伝える" width="30%" height="30%">
-                </label>
-                <br>
-                <input name="type" type="radio" value="card_fun" id="fun">
-                <label for="fun">
-                    <img src="image/card_fun.png" alt="推しとしてのスキを伝える" width="30%" height="30%">
-                </label>
-                <br>
-                <input name="type" type="radio" value="card_family" id="family">
-                <label for="family">
-                    <img src="image/card_family.png" alt="恋人としてのスキを伝える" width="30%" height="30%">
-                </label>
-                <br>
-                <input name="type" type="radio" value="card_longing" id="longing">
-                <label for="longing">
-                    <img src="image/card_longing.png" alt="憧れとしてのスキを伝える" width="30%" height="30%">
-                </label>
-                <p>
-                    <button type="button" id="back_type">戻る</button>
-                    <button type="button" id="next_type">OK!</button>
-                </p>
+                <div class="wrap_choice">
+                    <input name="type" type="radio" value="card_friend" id="friends" checked>
+                    <label for="friends">
+                        <div class="friends_choice">
+                            <img src="./img/handShake.svg" alt="握手">
+                            <p>友達としてのスキ</p>
+                        </div>
+                    </label>
+                    <br>
+                    <input name="type" type="radio" value="card_fun" id="fun">
+                    <label for="fun">
+                        <div class="fun_choice">
+                            <img src="./img/cheering.svg" alt="応援">
+                            <p>推しとしてのスキ</p>
+                        </div>
+                    </label>
+                    <br>
+                    <input name="type" type="radio" value="card_family" id="family">
+                    <label for="family">
+                        <div class="family_choice">
+                            <img src="./img/house.svg" alt="家">
+                            <p>家族としてのスキ</p>
+                        </div>
+                    </label>
+                    <br>
+                    <input name="type" type="radio" value="card_longing" id="longing">
+                    <label for="longing">
+                        <div class="longing_choice">
+                            <img src="./img/twinkle.svg" alt="キラキラ">
+                            <p>家族としてのスキ</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="suki_link third_link">
+                    <button type="button" id="next_type">
+                        <p>スキを決定</p>
+                    </button>
+                    <!--                    <p>-->
+                    <!--                        <button type="button" id="back_type">戻る</button>-->
+                    <!--                        <button type="button" id="next_type">OK!</button>-->
+                    <!--                    </p>-->
+                </div>
             </div>
             <div id="select_input">
-                <div id="select_name">
-                    <h3>
-                        <label for="input_name">
-                            スキを届けたい相手の名前を入力しよう(8文字以内)
-                        </label>
-                    </h3>
-                    <input type="text" name="target" id="input_name" maxlength="8" value="あなた">
+                <div class="name_style" id="select_name">
+                    <label for="input_name">
+                        <p>伝えたい人の名前を入力(~8文字)</p>
+                        <input class="select_textbox" type="text" name="target" id="input_name" maxlength="8"
+                               value="あなた">
+                    </label>
                 </div>
-                <div id="select_message">
-                    <h3>
-                        相手にメッセージを届けよう(30字以内)
-                    </h3>
-                    <input type="text" maxlength="30" name="message" id="input_message">
-                    <p>
-                        <button type="button" id="next_message">試す</button>
-                        <button type="button" id="back_input">戻る</button>
-                        <button type="button" id="reset">リセット</button>
-                    </p>
+                <div class="message_style" id="select_message">
+                    <label for="input_message">
+                        <p>メッセージをどうぞ(~30字)</p>
+                        <input class="select_textbox" type="text" maxlength="30" name="message" id="input_message">
+                    </label>
+                    <div class="type_button">
+                        <div class="suki_link next_button">
+                            <button type="button" id="next_message">
+                                <p>プレビューを更新</p>
+                            </button>
+                        </div>
+                        <div class="suki_link reset_button">
+                            <button type="button" id="reset">
+                                <p>プレビューをリセット</p>
+                            </button>
+                            <!--                        <button type="button" id="back_input">戻る</button>-->
+                        </div>
+                    </div>
                 </div>
+                <p>
+                    <input class="generate_button" type="submit" value="カードを制作">
+                </p>
             </div>
-
-            <div id="display_preview">
-                <canvas id="preview"></canvas>
+            <div class="display_style" id="display_preview">
+                <p>プレビューが表示されます</p>
+                <canvas class="preview_style" id="preview"></canvas>
             </div>
-            <p>
-                <input type="submit" value="作成する">
-            </p>
         </form>
     </div>
 </div>
