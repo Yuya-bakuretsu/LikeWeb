@@ -36,12 +36,13 @@
         let text_name = queryList.target;
         let text_message = queryList.message;
 //      文字スタイル指定
-        ctx.font = '32px serif';
+        ctx.font = '45px Hiragino Maru Gothic Pro';
+        ctx.textAlign = "center";
 //      座標指定
-        let x_name = (canvas.width / 1.5);
+        let x_name = (canvas.width / 1.53);
         let y_name = (canvas.height / 3);
-        let x_message = (canvas.width / 1.6);
-        let y_message = (canvas.height / 1.35);
+        let x_message = (canvas.width / 1.54);
+        let y_message = (canvas.height / 1.38);
         let cardType = "が友達として";
         switch(queryList.type){
             case "card_friend":
@@ -58,6 +59,7 @@
                 break;
         }
         ctx.fillText(text_name + cardType, x_name, y_name);
+        ctx.font = '24px Hiragino Maru Gothic Pro';
         ctx.fillText(text_message, x_message, y_message);
 //
 //        const tweetDivided = document.getElementById("tweet-area");
