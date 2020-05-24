@@ -44,7 +44,7 @@
         let y_message = (canvas.height * 2 / 3);
         let cardType = "が友達として";
         switch(queryList.type){
-            case "handShake":
+            case "card":
                 cardType = "が友達として";
                 break;
             case "house":
