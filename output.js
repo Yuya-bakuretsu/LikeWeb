@@ -30,7 +30,7 @@
             drawText();
         });
     }
-    const canvas = document.getElementById("preview");
+    let canvas = document.getElementById("preview");
     const ctx = canvas.getContext('2d');
     function drawText(){
         let text_name = queryList.target;
@@ -60,4 +60,13 @@
         ctx.fillText(text_name + cardType, x_name, y_name);
         ctx.fillText(text_message, x_message, y_message);
     }
+     document.getElementById("download").onclick = (event) => {
+        canvas = document.getElementById("preview");
+        console.log(canvas);
+        let link = document.createElement("a");
+        link.href = canvas.toDataURL("image/png");
+        link.download = "test.png";
+        link.click();
+     }
+
 })();
