@@ -59,6 +59,7 @@
         }
         ctx.fillText(text_name + cardType, x_name, y_name);
         ctx.fillText(text_message, x_message, y_message);
+<<<<<<< HEAD
 //
 //        const tweetDivided = document.getElementById("tweet-area");
 //        const anchor = document.createElement('a');
@@ -73,13 +74,11 @@
 //        const script = document.createElement('script');
 //        script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
 //        tweetDivided.appendChild(script);
-    }
-
+     }
      document.getElementById("download").onclick = (event) => {
          let link = document.createElement("a");
          link.href = canvas.toDataURL("image/png");
          link.download = "test.png";
          link.click();
      }
-
 })();
