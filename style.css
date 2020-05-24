@@ -1,6 +1,8 @@
 body {
   background-color: #FFE9EF;
   font-family: "Hiragino Maru Gothic Pro";
+  max-width: 450px;
+  margin: 0 auto 0 auto;
 }
 header{
   background-color: white;
@@ -55,6 +57,10 @@ header img {
   padding-top: 0;
   font-size: 20px;
   color: white;
+}
+.suki_link:active button {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
 }
 .first_link button{
   margin:-8px auto 31px auto;
@@ -140,6 +146,13 @@ footer a {
 .back img {
   margin-top: -1px;
   margin-right: 4px;
+}
+.back button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
 }
 .wrap_choice {
   display: flex;
@@ -276,6 +289,10 @@ input[type=radio] {
   color: white;
   margin-top: 30px;
 }
+.generate_button:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+}
 
 
 
@@ -296,4 +313,3 @@ input[type=radio] {
   height: 140px;
   margin-bottom: 20px;
 }
-
